@@ -1,0 +1,30 @@
+<p>formulario3 works!</p>
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="formUser" (ngSubmit)="procesar()">
+      <div class="mb-2">
+        <label class="form-label">
+          Nombre:
+        </label>
+        <input type="text" formControlName="name" name="nombre" class="form-control" placeholder="Ingrese nombre">
+        <div class="alert alert-danger mt-2" [hidden]="name.valid || name.pristine">
+          El nombre es obligatorio
+        </div>
+      </div>
+      <div class="mb-2">
+        <label class="form-label">
+          Email:
+        </label>
+        <input type="email" formControlName="email" name="edad" class="form-control" placeholder="Ingrese edad">
+        <div class="alert alert-danger mt-2" [hidden]="email.valid || email.pristine">
+          <span *ngIf="formUser.get('email')?.errors?.['required']">El email es obligatorio</span>
+          <span *ngIf="formUser.get('email')?.errors?.['email']">El email debe ser valido</span>
+        </div>
+      </div>
+      <button class="btn btn-primary" [disabled]="formUser.invalid">
+        Enviar
+      </button>
+    </form>
+  </div>
+</div>
+{{ name.value | json }}

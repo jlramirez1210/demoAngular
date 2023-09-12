@@ -6,4 +6,13 @@
   <app-bucles></app-bucles>
   <app-switch></app-switch>
   <app-formulario2></app-formulario2>
+  <app-formulario3></app-formulario3>
+
+  <h2>Componente Padre</h2>
+  <input type="text" class="form-control" [(ngModel)]="title">
+  <app-children [(title)]="title"></app-children>
+
+  <h2>Servicios</h2>
+  <app-add-messages></app-add-messages>
+  <app-list-messages></app-list-messages>
 </div>

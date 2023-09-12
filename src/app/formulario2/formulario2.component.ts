@@ -10,4 +10,8 @@ export class Formulario2Component {
     nombre:'',
     edad:''
   };
+
+  procesar(){
+    console.log(this.persona);
+  }
 }
