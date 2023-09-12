@@ -1,0 +1,24 @@
+<div>
+  <button [disabled]="button_disabled" class="btn btn-danger" (click)="text_color='text-danger'">Rojo</button>
+  <button [disabled]="button_disabled" class="btn btn-success" (click)="text_color='text-success'">Verde</button>
+  <button [disabled]="button_disabled" class="btn btn-primary" (click)="text_color='text-primary'">Azul</button>
+</div>
+<p [class]="text_color">Texto que va a cambiar de color</p>
+
+<p>
+  {{ text_color }}
+</p>
+
+<button class="btn btn-secondary" (click)="button_disabled = !button_disabled">
+  Activar/Desactivar
+</button>
+<br><br>
+<button class="btn btn-primary" (click)="src = 'https://images.pexels.com/photos/18252853/pexels-photo-18252853.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load'">
+  Imagen 1
+</button>
+
+<button class="btn btn-danger" (click)="src = 'https://images.pexels.com/photos/17976271/pexels-photo-17976271/free-photo-of-edificio-pared-urbano-pueblo.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load'">
+  Imagen 2
+</button>
+<br>
+<img [src]="src">
