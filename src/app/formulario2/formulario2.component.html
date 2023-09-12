@@ -1,0 +1,26 @@
+<p>formulario2 works!</p>
+<div class="card">
+  <div class="card-body">
+    <form action="">
+      <div class="mb-2">
+        <label class="form-label">
+          Nombre:
+        </label>
+        <input type="text" name="nombre" class="form-control" placeholder="Ingrese nombre" [(ngModel)]="persona.nombre">
+      </div>
+
+      <div class="mb-2">
+        <label class="form-label">
+          Edad:
+        </label>
+        <input type="number" name="edad" class="form-control" placeholder="Ingrese edad" [(ngModel)]="persona.edad">
+      </div>
+
+      <button class="btn btn-primary">
+        Enviar
+      </button>
+    </form>
+  </div>
+</div>
+
+{{ persona | json }}
