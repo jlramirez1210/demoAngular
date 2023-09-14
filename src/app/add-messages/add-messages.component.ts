@@ -10,4 +10,11 @@ export class AddMessagesComponent {
   constructor(public messageService:MessageService) {
 
   }
+  //message?:string;
+  message:string=''; //otra forma
+
+  addMessage(){
+    this.messageService.add(this.message);
+    this.message = "";
+  }
 }
